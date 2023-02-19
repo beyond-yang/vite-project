@@ -1,15 +1,17 @@
 <template>
   <el-container>
-      <el-aside width="auto">
-        <navAside :collapse="isCollapse"></navAside>
-      </el-aside>
-      <el-container>
-        <el-header>
-          <navHeader v-model:collapse="isCollapse"></navHeader>
-        </el-header>
-        <el-main><el-icon><Plus /></el-icon></el-main>
-      </el-container>
+    <el-aside width="auto">
+      <navAside :collapse="isCollapse"></navAside>
+    </el-aside>
+    <el-container>
+      <el-header>
+        <navHeader v-model:collapse="isCollapse"></navHeader>
+      </el-header>
+      <el-main>
+        <router-view></router-view>
+      </el-main>
     </el-container>
+  </el-container>
 </template>
 
 <script setup lang='ts'>
@@ -22,9 +24,5 @@ const isCollapse = ref(false);
 <style lang='scss' scoped>
 .el-container {
   height: 100%;
-}
-
-.el-main {
-  // background-color: #ecf5ff;
 }
 </style>

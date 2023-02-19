@@ -5,16 +5,22 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 const constRoutes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'Home',
-    component: () => import('@/views/Home.vue'),
+    component: () => import('@/components/container/src/index.vue'),
+    children: [
+      {
+        path: '/',
+        component: () => import('@/views/Home.vue')
+      },
+      {
+        path: '/chooseIcon',
+        component: () => import('@/views/chooseIcon/index.vue')
+      }
+    ]
   },
 ];
 
 let routes:Array<RouteRecordRaw> = [...constRoutes];
 
-// // 自动添加router目录下的所有ts路由模块
-// const files = require.context('./', false, /\.ts$/);
-// eager 自动推断类型
 const files: Record<string, any> = import.meta.glob(['./*/*.ts', './*.ts'], { eager: true });
 
 // 引入同级的文件
