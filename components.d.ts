@@ -20,7 +20,10 @@ declare module '@vue/runtime-core' {
     ElMenuItemGroup: typeof import('element-plus/es')['ElMenuItemGroup']
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    NavHeader: typeof import('./src/components/container/src/navHeader/index.vue')['default']
+    NavSide: typeof import('./src/components/container/src/navSide/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Src: typeof import('./src/components/container/src/index.vue')['default']
   }
 }
