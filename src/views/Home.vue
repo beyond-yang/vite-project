@@ -1,10 +1,6 @@
 <template>
-    <div>
-      首頁
-    </div>
-
-
-    
+  <div>
+  </div>
 </template>
 
 <script setup lang='ts'>
