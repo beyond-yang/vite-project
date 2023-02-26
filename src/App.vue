@@ -6,5 +6,7 @@
 
 </script>
 
-<style lang='scss' scoped>
+<style lang='scss'>
+@import './style/base.scss';
+@import './style/ui.scss';
 </style>

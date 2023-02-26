@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import router from '@/router'
 import { createPinia } from 'pinia'
-import './style.css'
+// import './style.css'
 import { toLine } from '@/utils/common'
 // 如果您正在使用CDN引入，请删除下面一行。
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'

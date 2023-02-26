@@ -3,27 +3,20 @@
     <el-button @click="toggleStatus">
       <slot></slot>
     </el-button>
-    <el-dialog v-model="dialogVisible" :title="title" width="60%">
-      <div class="dialog-body">
-        <div class="icon-container" v-for="(item, index) in Object.keys(ElementPlusIconsVue)" :key="index">
-        <div class="icon">
-          <el-icon>
-            <component :is="item"></component>
-          </el-icon>
+    <div class="m-select-icon-dialog-body-height">
+      <el-dialog v-model="dialogVisible" :title="title" width="60%">
+        <div class="dialog-body">
+          <div class="icon-container" v-for="(item, index) in Object.keys(ElementPlusIconsVue)" :key="index">
+            <div class="icon">
+              <el-icon>
+                <component :is="item"></component>
+              </el-icon>
+            </div>
+            <div class="text">{{ item }}</div>
+          </div>
         </div>
-        <div class="text">{{ item }}</div>
-      </div>
-      </div>
-      <!-- <span>This is a message</span>
-      <template #footer>
-        <span class="dialog-footer">
-          <el-button @click="toggleStatus">Cancel</el-button>
-          <el-button type="primary" @click="toggleStatus">
-            Confirm
-          </el-button>
-        </span>
-      </template> -->
-    </el-dialog>
+      </el-dialog>
+    </div>
   </div>
 </template>
 
@@ -64,6 +57,7 @@ watch(() => dialogVisible.value, (value) => {
       width: 33%;
       padding: 20px 0;
       cursor: pointer;
+
       &:hover {
         background-color: #f2f6fc;
       }
