@@ -1,6 +1,6 @@
 <template>
   <div>
-    <chooseIcon title="选择图标" :visible="visible">选择图标</chooseIcon>
+    <chooseIcon title="选择图标" v-model:visible="visible">选择图标</chooseIcon>
   </div>
 </template>
 

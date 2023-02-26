@@ -3,7 +3,6 @@
     <el-button @click="toggleStatus">
       <slot></slot>
     </el-button>
-
     <el-dialog v-model="dialogVisible" :title="title" width="60%">
       111
       <!-- <span>This is a message</span>
@@ -26,11 +25,17 @@ let props = defineProps<{
   visible: boolean
 }>();
 
+let emit = defineEmits(['update:visible']);
+
 let dialogVisible = ref(props.visible);
 
 const toggleStatus = () => {
   dialogVisible.value = true;
 }
+
+watch(() => dialogVisible.value, (value) => {
+  emit('update:visible', value);
+});
 
 </script>
 
