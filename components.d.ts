@@ -26,6 +26,6 @@ declare module '@vue/runtime-core' {
     NavSide: typeof import('./src/components/container/src/navSide/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    Src: typeof import('./src/components/container/src/index.vue')['default']
+    Src: typeof import('./src/components/chooseIcon/src/index.vue')['default']
   }
 }
