@@ -34,5 +34,6 @@ let props = defineProps<{
 <style lang='scss' scoped>
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 200px;
+  height: 100%;
 }
 </style>
