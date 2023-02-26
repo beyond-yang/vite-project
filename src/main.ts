@@ -7,6 +7,7 @@ import { toLine } from '@/utils/common'
 // 如果您正在使用CDN引入，请删除下面一行。
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import App from './App.vue'
+import MComponents from './components'
 
 const app = createApp(App);
 
@@ -19,4 +20,4 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 
 }
 
-app.use(router).use(createPinia()).mount('#app');
+app.use(router).use(createPinia()).use(MComponents).mount('#app');
