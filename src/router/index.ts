@@ -22,6 +22,10 @@ const constRoutes: Array<RouteRecordRaw> = [
       {
         path: '/trendMark',
         component: () => import('@/views/trendMark/index.vue')
+      },
+      {
+        path: '/notification',
+        component: () => import('@/views/notification/index.vue')
       }
     ]
   },

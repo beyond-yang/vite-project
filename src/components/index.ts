@@ -3,11 +3,13 @@ import { App } from 'vue';
 import chooseArea from './chooseArea';
 import chooseIcon from './chooseIcon';
 import trendMark from './trend';
+import notification from './notification';
 
 const components = [
   chooseArea,
   chooseIcon,
-  trendMark
+  trendMark,
+  notification
 ];
 
 export default {
