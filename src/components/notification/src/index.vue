@@ -1,10 +1,15 @@
 <template>
-  <div>
-    <el-badge :value="value" :max="max" :is-dot="isDot" >
-      <el-icon>
-        <component :is="icon"></component>
-      </el-icon>
-  </el-badge>
+  <div class="notification-wrap">
+    <el-popover placement="bottom" :width="200" trigger="click">
+      <template #reference>
+        <el-badge :value="value" :max="max" :is-dot="isDot">
+          <el-icon>
+            <component :is="icon"></component>
+          </el-icon>
+        </el-badge>
+      </template>
+      <slot></slot>
+    </el-popover>
   </div>
 </template>
 <script setup lang='ts'>
@@ -30,6 +35,4 @@ const props = defineProps({
 
 </script>
 
-<style lang='scss' scoped>
-
-</style>
+<style lang='scss' scoped></style>

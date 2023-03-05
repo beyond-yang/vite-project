@@ -4,12 +4,14 @@ import chooseArea from './chooseArea';
 import chooseIcon from './chooseIcon';
 import trendMark from './trend';
 import notification from './notification';
+import list from './list';
 
 const components = [
   chooseArea,
   chooseIcon,
   trendMark,
-  notification
+  notification,
+  list
 ];
 
 export default {
