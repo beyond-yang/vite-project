@@ -1,11 +1,14 @@
 <template>
   <div class="trend-mark">
-    <div class="text">{{ text }}</div>
+    <div class="text">
+      <slot v-if="slot.default"></slot>
+      <span v-else>{{ text }}</span>
+    </div>
     <div class="icon">
-      <el-icon v-if="type === 'up'" :style="{ color: upIconColor }">
+      <el-icon v-if="type === 'up'" :style="{ color: reserveColor ? '#e96f6f': upIconColor }">
         <ArrowUp />
       </el-icon>
-      <el-icon v-else :style="{ color: downIconColor }">
+      <el-icon v-else :style="{ color: reserveColor ? '#7cde9e' : downIconColor }">
         <ArrowDown />
       </el-icon>
     </div>
@@ -13,6 +16,7 @@
 </template>
 
 <script setup lang='ts'>
+import { useSlots } from 'vue';
 let props = defineProps({
   // 标记类型 上升up 下降 down
   type: {
@@ -33,8 +37,15 @@ let props = defineProps({
   downIconColor: {
     type: String,
     default: '#e96f6f'
+  },
+  // 颜色翻转
+  reserveColor: {
+    type: Boolean,
+    default: false
   }
 });
+
+let slot = useSlots();
 
 </script>
 
