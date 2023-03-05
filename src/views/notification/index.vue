@@ -1,5 +1,5 @@
 <template>
-  <notification></notification>
+  <notification :value="12"></notification>
 </template>
 
 <script setup lang='ts'>
