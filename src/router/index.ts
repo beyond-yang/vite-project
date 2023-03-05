@@ -18,6 +18,10 @@ const constRoutes: Array<RouteRecordRaw> = [
       {
         path: '/chooseArea',
         component: () => import('@/views/chooseArea/index.vue')
+      },
+      {
+        path: '/trendMark',
+        component: () => import('@/views/trendMark/index.vue')
       }
     ]
   },
