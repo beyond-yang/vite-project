@@ -5,13 +5,15 @@ import chooseIcon from './chooseIcon';
 import trendMark from './trend';
 import notification from './notification';
 import list from './list';
+import menu from './menu';
 
 const components = [
   chooseArea,
   chooseIcon,
   trendMark,
   notification,
-  list
+  list,
+  menu
 ];
 
 export default {
