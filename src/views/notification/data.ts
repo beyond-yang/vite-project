@@ -20,6 +20,24 @@ export const list = [
         title: '斯蒂夫·沃兹尼亚克已批准了你的休假申请',
         time: '2019-05-08 14:33:18',
         avatar: 'https://gw.alipayobjects.com/zos/rmsportal/kISTdvpyTAhtGxpovNWd.png'
+      },
+      {
+        id: 4,
+        title: '蒂姆·库克回复了你的邮件',
+        time: '2019-05-08 14:33:18',
+        avatar: 'https://gw.alipayobjects.com/zos/rmsportal/ThXAXghbEsBCCSDihZxY.png'
+      },
+      {
+        id: 5,
+        title: '乔纳森·伊夫邀请你参加会议',
+        time: '2019-05-08 14:33:18',
+        avatar: 'https://gw.alipayobjects.com/zos/rmsportal/OKJXDXrmkNshAMvwtvhu.png'
+      },
+      {
+        id: 6,
+        title: '斯蒂夫·沃兹尼亚克已批准了你的休假申请',
+        time: '2019-05-08 14:33:18',
+        avatar: 'https://gw.alipayobjects.com/zos/rmsportal/kISTdvpyTAhtGxpovNWd.png'
       }
     ],
   },
@@ -75,10 +93,10 @@ export const list = [
 export const actions = [
   {
     text: '清空代办',
-    icon: 'delete'
+    icon: 'Delete'
   },
   {
     text: '查看更多',
-    icon: 'edit'
+    icon: 'Edit'
   },
 ]
