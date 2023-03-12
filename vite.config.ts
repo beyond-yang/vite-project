@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 // 自动引入插件
 import AutoImport from 'unplugin-auto-import/vite';
 // 按需引入插件
@@ -15,6 +16,7 @@ import eslintPlugin from 'vite-plugin-eslint'
 export default defineConfig({
   plugins: [
     vue(),
+    vueJsx(),
     AutoImport({
       resolvers: [ElementPlusResolver()],
     }),
