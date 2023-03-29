@@ -8,6 +8,7 @@ import { toLine } from '@/utils/common'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import App from './App.vue'
 import MComponents from './components'
+import ElementPlus from 'element-plus'
 
 const app = createApp(App);
 
@@ -20,4 +21,4 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 
 }
 
-app.use(router).use(createPinia()).use(MComponents).mount('#app');
+app.use(router).use(createPinia()).use(MComponents).use(ElementPlus).mount('#app');

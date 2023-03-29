@@ -1,5 +1,6 @@
 import { defineComponent, PropType, useAttrs } from 'vue';
 import { menuItem } from './types'
+// import { ElMenu, ElMenuItem, ElSubMenu } from 'element-plus'
 
 export default defineComponent({
   props: {
@@ -16,6 +17,9 @@ export default defineComponent({
       default: false,
     }
   },
+  components: {
+    // ElMenu, ElMenuItem, ElSubMenu
+  },
   setup(props, ctx) {
     const attrs = useAttrs();
     // 封装一个渲染无限层级菜单的方法,函数会返回一段jsx的代码
@@ -29,7 +33,7 @@ export default defineComponent({
               <el-icon>
                 <item.icon />
               </el-icon>
-              <span>{ item.name }</span>
+              <span>{item.name}</span>
             </>
           }
         }
@@ -37,30 +41,28 @@ export default defineComponent({
         if (item?.children?.length) {
           return (
             <el-sub-menu index={item.index} v-slots={slots}>
-              { renderMenu(item.children) }
+              {renderMenu(item.children)}
             </el-sub-menu>
           )
-        } 
+        }
         return (
           <el-menu-item index={item.index}>
             <el-icon>
-                <item.icon />
+              <item.icon />
             </el-icon>
-              <span>{ item.name }</span>
+            <span>{item.name}</span>
           </el-menu-item>
         )
       });
     }
     return () => {
-      console.log(renderMenu(props.data as menuItem[]))
-      return (
-        <el-menu
+      return <el-menu
           default-active={props.defaultActive}
           router={props.router}
           {...attrs}>
           {renderMenu(props.data as menuItem[])}
         </el-menu>
-      );
+
     };
   }
 })

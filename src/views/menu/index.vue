@@ -1,7 +1,8 @@
 <template>
   <div>
-    <m-menu :data="data" defaultActive="1"></m-menu>
-    <m-infinite-menu :data="data2" defaultActive="1" background-color="red"></m-infinite-menu>
+    <!-- <m-menu :data="data" defaultActive="1"></m-menu> -->
+    <!-- <el-button type="success" plain>Success</el-button> -->
+    <m-infinite-menu :data="data2" defaultActive="1"></m-infinite-menu>
   </div>
 </template>
 
