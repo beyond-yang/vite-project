@@ -1,5 +1,6 @@
 import { defineComponent, PropType, useAttrs } from 'vue';
 import { menuItem } from './types'
+import * as Icons from '@element-plus/icons-vue'
 // import { ElMenu, ElMenuItem, ElSubMenu } from 'element-plus'
 
 export default defineComponent({
@@ -26,12 +27,13 @@ export default defineComponent({
     let renderMenu = (data: menuItem[]) => {
       // 首先会去循环菜单
       return data.map((item: menuItem) => {
+        const icon = (Icons as any)[item.icon]
         // jsx 中如何去处理vue的插槽
         let slots = {
           title: () => {
             return <>
               <el-icon>
-                <item.icon />
+                <icon />
               </el-icon>
               <span>{item.name}</span>
             </>
@@ -48,7 +50,7 @@ export default defineComponent({
         return (
           <el-menu-item index={item.index}>
             <el-icon>
-              <item.icon />
+              <icon />
             </el-icon>
             <span>{item.name}</span>
           </el-menu-item>
