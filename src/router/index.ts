@@ -30,6 +30,10 @@ const constRoutes: Array<RouteRecordRaw> = [
       {
         path: '/menu',
         component: () => import('@/views/menu/index.vue')
+      },
+      {
+        path: '/infinite-menu',
+        component: () => import('@/views/infinite-menu/index.vue')
       }
     ]
   },

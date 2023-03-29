@@ -62,7 +62,6 @@ export default defineComponent({
           {...attrs}>
           {renderMenu(props.data as menuItem[])}
         </el-menu>
-
     };
   }
 })

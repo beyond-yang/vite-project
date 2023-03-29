@@ -1,6 +1,6 @@
 <template>
   <div>
-    <m-menu :data="data" defaultActive="1"></m-menu>
+    <m-infinite-menu :data="data2" defaultActive="1"></m-infinite-menu>
   </div>
 </template>
 

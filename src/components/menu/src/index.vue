@@ -1,7 +1,7 @@
 <template>
   <div class="menu-wrap">
     <!-- 二级菜单 -->
-    <el-menu :default-active="defaultActive">
+    <el-menu :default-active="defaultActive" :router="router" v-bind="$attrs" class="el-menu-vertical-demo">
       <template v-for="item in data" :key="item.index">
         <el-menu-item v-if="!item?.children?.length" :index="item.index">
           <el-icon>
@@ -51,4 +51,12 @@ console.log(props.data);
 
 </script>
 
-<style lang='scss' scoped></style>
+<style lang='scss' scoped>
+.menu-wrap {
+  height: 100%;
+}
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+  width: 200px;
+  height: 100%;
+}
+</style>
