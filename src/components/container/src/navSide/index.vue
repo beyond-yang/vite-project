@@ -32,11 +32,6 @@ const data = [
     index: '/trendMark'
   },
   {
-    icon: 'Clock',
-    name: '时间选择',
-    index: '/TimeSelect'
-  },
-  {
     icon: 'Bell',
     name: '通知菜单',
     index: '/notification'
@@ -55,6 +50,11 @@ const data = [
     icon: 'More',
     name: '进度条',
     index: '/progress'
+  },
+  {
+    icon: 'Timer',
+    name: '选择时间',
+    index: '/choose-time'
   }
 ];
 
