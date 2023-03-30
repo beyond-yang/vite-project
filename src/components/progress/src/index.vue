@@ -25,6 +25,8 @@ const props = defineProps({
   }
 });
 
+const emit = defineEmits(['progress-complete']);
+
 // 使用定时器，动态的改变进度条的百分比
 let percentageVal = ref(0);
 
@@ -34,6 +36,7 @@ onMounted(() => {
     percentageVal.value += 1;
     if (!props.animation ||  percentageVal.value >= props.percentage) {
       percentageVal.value = props.percentage;
+      emit('progress-complete');
       clearInterval(timer);
     }
   }, time);
