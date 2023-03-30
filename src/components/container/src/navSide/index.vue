@@ -50,6 +50,11 @@ const data = [
     icon: 'Menu',
     name: '无限层级导航菜单',
     index: '/infinite-menu'
+  },
+  {
+    icon: 'More',
+    name: '进度条',
+    index: '/progress'
   }
 ];
 
