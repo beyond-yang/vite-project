@@ -55,6 +55,11 @@ const data = [
     icon: 'Timer',
     name: '选择时间',
     index: '/choose-time'
+  },
+  {
+    icon: 'Tickets',
+    name: '表单',
+    index: '/form'
   }
 ];
 
